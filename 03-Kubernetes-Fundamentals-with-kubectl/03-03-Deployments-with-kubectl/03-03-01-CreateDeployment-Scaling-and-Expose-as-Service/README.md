@@ -10,7 +10,6 @@
 ## Step-02: Create Deployment
 - Create Deployment to rollout a ReplicaSet
 - Verify Deployment, ReplicaSet & Pods
-- **Docker Image Location:** https://hub.docker.com/repository/docker/stacksimplify/kubenginx
 ```
 # Create Deployment
 kubectl create deployment <Deplyment-Name> --image=<Container-Image>
@@ -36,6 +35,8 @@ kubectl get po
 # Scale Up the Deployment
 kubectl scale --replicas=10 deployment/<Deployment-Name>
 kubectl scale --replicas=10 deployment/my-first-deployment 
+# or We can edit and change the replicas to 10
+kubectl edit deployment/my-first-deployment  
 
 # Verify Deployment
 kubectl get deploy
@@ -49,6 +50,8 @@ kubectl get po
 # Scale Down the Deployment
 kubectl scale --replicas=2 deployment/my-first-deployment 
 kubectl get deploy
+# or We can edit and change the replicas to 2
+kubectl edit deployment/my-first-deployment 
 ```
 
 ## Step-04: Expose Deployment as a Service

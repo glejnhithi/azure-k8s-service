@@ -26,6 +26,20 @@ kubectl run <desired-pod-name> --image <Container-Image>
 
 # Replace Pod Name, Container Image
 kubectl run my-first-pod --image glejnhithi/kubenginx:1.0.0
+
+# Create Template with --dry-run and -o yaml 
+kubectl run <desired-pod-name> --image <Container-Image> --dry-run=client -o yaml > <file-name>.yaml
+
+kubectl run my-first-pod --image glejnhithi/kubenginx:1.0.0 --dry-run=client -o yaml >  my-first-pod.yaml
+
+# Same Template but with a command to execute
+kubectl run <desired-pod-name> --image <Container-Image> --dry-run=client -o yaml  --command sleep 2000 > <file-name>.yaml
+
+kubectl run my-first-pod --image glejnhithi/kubenginx:1.0.0 --dry-run=client -o yaml --command sleep 2000 >  my-first-pod.yaml
+
+# Get a Running Pod Configuration (or any k8s objects)
+kubectl get [pod,deploy,replicaset,ds,secret,configmap .. etc] -o yaml > <file-name>.yaml
+
 ```  
 
 ### List Pods
