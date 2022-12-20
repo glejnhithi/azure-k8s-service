@@ -122,6 +122,19 @@ kubectl apply -f 01-multi-cm-demo-pod.yml
 #check Pod and Logs
 kubectl logs pod-name
 
+# Config All Key-Value as env
+kubectl apply -f 02-all-cm-demo.yml
+kubectl apply -f 02-all-cm-demo-pod.yml
+#check Pod and Logs
+kubectl logs pod-name
+
+# Add CM data to POD
+kubectl apply -f 03-add-cm-demo.yml
+kubectl apply -f 03-add-cm-demo-pod.yml
+#check Pod and Logs
+kubectl logs pod-name
+
+
 
 ```
 -----------------------------------------------------------------
