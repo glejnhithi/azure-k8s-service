@@ -37,9 +37,10 @@ kubectl logs <pod name> / kubectl logs -f <pod name>
 #Kubernetes - ConfigMaps
 
 ## Step-01: Introduction
-- Kubernetes Secrets let you store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys. 
-- Storing confidential information in a Secret is safer and more flexible than putting it directly in a Pod definition or in a container image. 
-- A ConfigMap is not designed to hold large chunks of data. The data stored in a ConfigMap cannot exceed 1 MiB. If you need to store settings that are larger than this limit, you may want to consider mounting a volume.
+- A ConfigMap is an API object used to store non-confidential data in key-value pairs. 
+- Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
+- A ConfigMap is not designed to hold large chunks of data. The data stored in a ConfigMap cannot exceed 1 MiB.
+- If you need to store settings that are larger than this limit, you may want to consider mounting a volume.
 
 ## Step-02: Create Config Map (alias cm)
 ### Create Kubernetes ConfigMap manifest
@@ -164,6 +165,21 @@ type: Opaque
 data:
   # Output of echo -n 'Redhat1449' | base64
   db-password: ZGJwYXNzd29yZDEx
+```
+### Add Secret data to a Volume
+```
+  containers:
+    - name: test-container
+      volumeMounts:
+      - name: secret-volume
+        mountPath: /etc/secret      # Path secret will be added 
+		readOnly: true              # Secret will read and no one can mofidy it. 
+  volumes:
+    - name: config-volume
+      secret:
+        # Provide the name of the Secret containing the files you want
+        # to add to the container
+        secretName: <Name of the Secret>
 ```
 ## Step-03: Update secret in MySQL Deployment for DB Password
 ```yml
