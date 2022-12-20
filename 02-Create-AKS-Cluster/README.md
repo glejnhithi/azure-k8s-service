@@ -8,8 +8,8 @@
 - Create Kubernetes Cluster
 - **Basics**
   - **Subscription:** Free Trial
-  - **Resource Group:** Creat New: aks-rg1
-  - **Kubernetes Cluster Name:** aksdemo1
+  - **Resource Group:** Creat New: aks-rg
+  - **Kubernetes Cluster Name:** aksdemo
   - **Region:** (US) Central US
   - **Kubernetes Version:** Select what ever is latest stable version
   - **Node Size:** Standard DS2 v2 (Default one)
