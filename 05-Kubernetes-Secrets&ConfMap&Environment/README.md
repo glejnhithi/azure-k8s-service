@@ -77,6 +77,7 @@ kubectl create configmap <cm-file> --from-literal=<key=pair> --from-literal=<key
 ### Update ConfigMap as Environment variables
 ```yml
 containers:
+  - name: test-container
 	env: 
 	- name: SPECIAL_LEVEL_KEY
 	  valueFrom:
