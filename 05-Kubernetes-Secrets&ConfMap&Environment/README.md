@@ -7,7 +7,7 @@
 - Typically you can set these variables directly from a terminal, from a configuration file in a home directory, or using other tools
 
 ## Step-02: Set Environment variables to file
-```
+```yml
 conatiners:
 - name:
   image: 
@@ -44,7 +44,7 @@ kubectl logs <pod name> / kubectl logs -f <pod name>
 
 ## Step-02: Create Config Map (alias cm)
 ### Create Kubernetes ConfigMap manifest
-```
+```yml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -75,7 +75,7 @@ kubectl create configmap <name> --from-file=/file/path --from-file=/file/path
 kubectl create configmap <cm-file> --from-literal=<key=pair> --from-literal=<key=pair>
 ```
 ### Update ConfigMap as Environment variables
-```
+```yml
 containers:
 	env: 
 	- name: SPECIAL_LEVEL_KEY
@@ -86,7 +86,7 @@ containers:
 
 ```
 ### Add ConfigMap data to a Volume
-```
+```yml
   containers:
     - name: test-container
       volumeMounts:
@@ -100,7 +100,7 @@ containers:
         name: special-config
 ```
 ### Configure all ConfigMap key-value as container environment variables
-```
+```yml
  containers:
     - name: test-container
       envFrom:
@@ -167,7 +167,7 @@ data:
   db-password: ZGJwYXNzd29yZDEx
 ```
 ### Add Secret data to a Volume
-```
+```yml
   containers:
     - name: test-container
       volumeMounts:
