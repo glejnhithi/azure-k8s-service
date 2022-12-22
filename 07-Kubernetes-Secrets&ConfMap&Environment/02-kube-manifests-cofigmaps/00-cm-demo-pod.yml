@@ -4,14 +4,19 @@ metadata:
   name: test-pod
 spec:   
   containers:   
-    - name: test 
+    - name: test-ts 
       image: redis  
       command: [ "/bin/sh", "-c", "env" ]   
       env:   
         # Define the environment variable   
-        - name: SPECIAL_LEVEL_KEY   
+        - name: SPECIAL_NAME  
           valueFrom:   
             configMapKeyRef:  
-              name: first-config    
-              key: low.config  
+              name: first-test   
+              key: emri
+        - name: SPECIAL_NR  
+          valueFrom:   
+            configMapKeyRef:  
+              name: first-test   
+              key: test 
   restartPolicy: Never

@@ -6,7 +6,6 @@ spec:
   containers:
     - name: test
       image: redis
-      command: [ "/bin/sh", "-c", "ls /etc/config/" ]
       volumeMounts:
       - name: config-volume
         mountPath: /etc/config
