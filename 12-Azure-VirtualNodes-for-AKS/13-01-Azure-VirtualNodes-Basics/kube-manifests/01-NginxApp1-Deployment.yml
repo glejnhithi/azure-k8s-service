@@ -22,7 +22,7 @@ spec:
 # To schedule pods on Azure Virtual Nodes            
       nodeSelector:
         kubernetes.io/role: agent
-        beta.kubernetes.io/os: linux
+        kubernetes.io/os: linux
         type: virtual-kubelet
       tolerations:
       - key: virtual-kubelet.io/provider
