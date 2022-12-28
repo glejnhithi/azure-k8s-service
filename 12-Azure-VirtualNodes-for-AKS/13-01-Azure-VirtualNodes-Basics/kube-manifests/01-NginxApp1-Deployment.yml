@@ -27,7 +27,7 @@ spec:
       tolerations:
       - key: virtual-kubelet.io/provider
         operator: Exists
-      - key: azure.com/aci
+      - key: azure
         effect: NoSchedule            
 
    
