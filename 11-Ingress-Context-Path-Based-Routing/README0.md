@@ -3,7 +3,7 @@
 ## Step-01: Introduction
 - We are going to implement context path based routing using Ingress
 
-[![Image](https://www.stacksimplify.com/course-images/azure-aks-ingress-path-based-routing.png "Azure AKS Kubernetes - Masterclass")](https://www.udemy.com/course/aws-eks-kubernetes-masterclass-devops-microservices/?referralCode=257C9AD5B5AF8D12D1E1)
+[![Image](https://www.stacksimplify.com/course-images/azure-aks-ingress-path-based-routing.png )]
 
 ## Step-02: Review k8s Application Manifests
 - 01-NginxApp1-Manifests
