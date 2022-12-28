@@ -25,9 +25,9 @@ spec:
         kubernetes.io/os: linux
         type: virtual-kubelet
       tolerations:
-      - key: "virtual-kubelet.io/provider"
-        operator: "Equal"
-      - key: "azure"
-        effect: "NoSchedule"            
+      - key: virtual-kubelet.io/provider
+        operator: Exists
+      - key: azure.com/aci
+        effect: NoSchedule          
 
    
