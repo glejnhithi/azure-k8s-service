@@ -2,7 +2,7 @@
 
 ## Step-01: Introduction
 ### Ingress Basic Architecture
-[![Image](https://www.stacksimplify.com/course-images/azure-aks-ingress-basic.png "Azure AKS Kubernetes - Masterclass")](https://www.udemy.com/course/aws-eks-kubernetes-masterclass-devops-microservices/?referralCode=257C9AD5B5AF8D12D1E1)
+[![Image](https://www.stacksimplify.com/course-images/azure-aks-ingress-basic.png "Azure AKS Kubernetes - Masterclass")]
 
 ### What are we going to learn?
 - We are going to create a **Static Public IP** for Ingress in Azure AKS
