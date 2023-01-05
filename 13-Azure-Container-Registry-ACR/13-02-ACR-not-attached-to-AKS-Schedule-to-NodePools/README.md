@@ -112,7 +112,7 @@ docker push $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
 - Review file: shell-script/generate-service-principal.sh
 - Update ACR_NAME with your container registry name
 - Update SERVICE_PRINCIPAL_NAME as desired
-### NEW SCRIPT - UPDATED ON 20-OCT-2021
+### NEW SCRIPT - UPDATED 
 ```sh
 #!/bin/bash
 # This script requires Azure CLI version 2.25.0 or later. Check version with `az --version`.
